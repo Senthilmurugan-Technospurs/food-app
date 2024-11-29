@@ -1,16 +1,20 @@
+/* Header container */
 .header {
   display: flex;
   gap: 3rem;
   margin: 3rem auto;
   width: 90%;
   max-width: 75rem;
+  flex-direction: row; /* Default horizontal layout */
 }
 
+/* Slideshow container */
 .slideshow {
   width: 40rem;
   height: 25rem;
 }
 
+/* Hero section */
 .hero {
   color: #ddd6cb;
   font-size: 1.5rem;
@@ -28,6 +32,7 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* Call-to-action section */
 .cta {
   font-size: 1.5rem;
   display: flex;
@@ -63,6 +68,7 @@
   color: #f9b241;
 }
 
+/* Section container */
 .section {
   display: flex;
   flex-direction: column;
@@ -72,4 +78,41 @@
   width: 90%;
   margin: 2rem auto;
   text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  /* Header layout for mobile: Make it vertical */
+  .header {
+    flex-direction: column;
+    gap: 2rem; /* Adjust gap for mobile */
+  }
+
+  /* Slideshow: Make it take full width on mobile */
+  .slideshow {
+    width: 100%;
+    height: 20rem;
+    margin-top: 50px;
+  }
+
+  /* Hero section: Adjust font size for mobile */
+  .hero {
+    font-size: 1.25rem;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  /* Call-to-action section: Adjust layout and font size */
+  .cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .cta a {
+    width: 100%;
+    text-align: center;
+  }
 }

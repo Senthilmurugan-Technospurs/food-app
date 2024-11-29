@@ -17,8 +17,45 @@
   padding: 0;
   display: flex;
   gap: 1.5rem;
-  /* font-family: 'Montserrat', sans-serif; */
   font-size: 1.25rem;
+}
+
+.navList {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navList.active {
+  display: block;
+  position: absolute;
+  top: 115px;
+  left: 0;
+  right: 0;
+  background-color: #6e4128;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  /* Show hamburger menu on small screens */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  .nav ul {
+    display: none;
+  }
+  .navList li {
+    margin: 10px 0;
+  }
+
+  /* Hamburger bars */
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+  }
 }
 
 .logo {
